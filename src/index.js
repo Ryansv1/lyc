@@ -16,8 +16,11 @@ require('./controllers/authController')(app);
 // Rotas
 
 app.get('/', (req, res) => {
-    res.render('pages/a');
+    res.render('pages/login');
 });
+app.get('/signin', (req, res)=>{
+    res.render('pages/index', { title:'Lycooper'})
+})
 
 
 app.listen(8090);
