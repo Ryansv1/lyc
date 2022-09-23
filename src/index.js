@@ -12,14 +12,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 require('./controllers/authController')(app);
+require('./controllers/projectController')(app);
 
 // Rotas
 
 app.get('/', (req, res) => {
-    res.render('pages/login');
+    res.render('pages/login', { title:'Lycooper'});
 });
 app.get('/signin', (req, res)=>{
-    res.render('pages/index', { title:'Lycooper'})
+    res.render('pages/signin', { title:'Lycooper'})
 })
 
 
