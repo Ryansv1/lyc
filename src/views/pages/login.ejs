@@ -10,18 +10,18 @@
     <link href="./css/style-login.css" rel="stylesheet">
     <title>Login</title>
 </head>
-<body>
-    <h1><%= title %></h1>
-    <div class="container-main-login">
-        <div class="container-left">
-            <div class="page-register">
+<body class="d-flex flex-column justify-content-center w-100 h-100">
+    <h1 class="container-sm text-center"><%= title %></h1>
+    <div class="container d-sm-inline-flex w-100 h-100">
+        <div class="container-sm flex-column">
+            <div class="container-sm flex-column w-50 h-50">
                 <h1>Ainda não tem uma conta?</h1>
                 <h3>Faça seu registro abaixo!</h3>
                 <a href="/signin"><button type="submit" class="btn btn-success">Login</button></a>
             </div>
         </div>
-        <div class="container-right">
-            <div class="page-login">
+        <div class="container-sm flex-column">
+            <div class="container-sm flex-column w-50 h-50">
                 <h1>Faça seu Login abaixo!</h1>
                 <form action="/auth/authenticate" method="POST" class="form-login">
                     <div class="textfield">
