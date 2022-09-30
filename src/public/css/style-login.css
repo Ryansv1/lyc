@@ -14,16 +14,25 @@ body{
 }
 
 .container{
-    background-color: #38FA5D;
+    background-color: #FA5959;
     border-radius: 20px;
+    box-shadow: 20px 10px 10px;
 }
 
 .container-sm{
-    background-color: #2CC748;
+    background-color: #C74848;
     border-radius: 20px;
+    
 }
 
 .container-sm form input{
+    background-color: #202020;
+    border-radius: 20px;
+    box-shadow: 20px;
+    color: white;
+    font-weight: 800;
+}  
+.container-sm form input::after{
     background-color: #202020;
     border-radius: 20px;
     box-shadow: 20px;
@@ -36,3 +45,15 @@ body{
     font-weight: 800;
 }
 
+.btn {
+    background-color:#FA5959;
+    font-weight: 800;   
+}
+
+h1 {
+    font-weight: 800;
+}
+
+h3{
+    font-weight: 600;
+}
