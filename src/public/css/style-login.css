@@ -9,3 +9,30 @@
     overflow-y: hidden;
 }
 
+body{
+    background-color: #202020;
+}
+
+.container{
+    background-color: #38FA5D;
+    border-radius: 20px;
+}
+
+.container-sm{
+    background-color: #2CC748;
+    border-radius: 20px;
+}
+
+.container-sm form input{
+    background-color: #202020;
+    border-radius: 20px;
+    box-shadow: 20px;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+}  
+
+.container-sm form label {
+    font-weight: 800;
+}
+

@@ -10,20 +10,20 @@
     <link href="./css/style-login.css" rel="stylesheet">
     <title>Login</title>
 </head>
-<body class="d-flex flex-column justify-content-center w-100 h-100">
-    <h1 class="container-sm text-center"><%= title %></h1>
-    <div class="container d-sm-inline-flex w-100 h-100">
-        <div class="container-sm flex-column">
-            <div class="container-sm flex-column w-50 h-50">
+<body class="d-flex flex-column justify-content-center">
+    <h1 class="container text-center"><%= title %></h1>
+    <div class="container d-sm-inline-flex justify-content-center align-items-center">
+        <div class="container-sm my-5">
+            <div class="container-sm flex-column text-center">
                 <h1>Ainda não tem uma conta?</h1>
                 <h3>Faça seu registro abaixo!</h3>
-                <a href="/signin"><button type="submit" class="btn btn-success">Login</button></a>
+                <a href="/signin"><button type="submit" class="btn">Login</button></a>
             </div>
         </div>
-        <div class="container-sm flex-column">
-            <div class="container-sm flex-column w-50 h-50">
+        <div class="container-sm my-5">
+            <div class="container-sm flex-column text-center">
                 <h1>Faça seu Login abaixo!</h1>
-                <form action="/auth/authenticate" method="POST" class="form-login">
+                <form action="/auth/authenticate" method="POST" class="container-sm">
                     <div class="textfield">
                         <label class="label" for="user">E-mail</label>
                         <input type="text" placeholder="example@example.com" name="email">
@@ -32,8 +32,8 @@
                         <label class="label" for="pass">Senha</label>
                         <input type="password" placeholder="Senha" name="password">
                     </div>
-                    <button class="btn btn-dark mt-3" type="reset">Limpar dados</button>
-                    <button class="btn btn-success mt-3" type="submit" name="submit">Criar</button>
+                    <button class="btn mt-3" type="reset">Limpar dados</button>
+                    <button class="btn mt-3" type="submit" name="submit">Criar</button>
                 </form>
             </div>
         </div>
