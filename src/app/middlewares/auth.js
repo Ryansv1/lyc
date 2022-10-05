@@ -2,26 +2,43 @@ const jwt = require('jsonwebtoken');
 const authConfig = require('../../config/auth.json')
 
 module.exports = (req, res, next) =>{
-    const authHeader = req.headers.authorization;
+    const authorization = req.cookies.authorization;
 
-    if(!authHeader)
-        return res.status(401).send({ error: 'No Token Provided' });
+    if(!authorization){
+        console.log('nao tem token');
+        req.authError = { error: 'no token provided' }
+        next()
+    }
 
-    const parts = authHeader.split(' ');
+    const parts = authorization ? authorization.split(' ') : '';
 
-    if(!parts.length === 2)
-        return res.status(401).send({ error: 'Token Error' });
+    if(!parts.length === 2){
+        console.log('token == 2');
+        req.authError = { error: 'token error'}
+        next()
+    }
+
 
     const [ scheme, token ] = parts;
     
-    if(!/^Bearer$/i.test(scheme))
-        return res.status(401).send({ error: 'Token Malformatted' });
-
+    if(!/^Bearer$/i.test(scheme)){
+        req.authError = { error: 'token malformatted' }
+        console.log('token nao passou no test');
+        next()
+    }
+        
   jwt.verify(token, authConfig.secret, (err, decoded) =>{
-    if(err) 
-        return res.status(401).send({ error: "Token Invalid" })
-    
-    req.userId = decoded.id;
-    return next();
-    });
+    if(err) {
+        req.authError = { error: 'token invalid' }
+        req.isValidToken = false
+        console.log('token invalido, next');
+        next()
+    } else {   
+        console.log('nao entra se der next');
+        req.userId = decoded.id;
+        req.isValidToken = true;
+        res.cookie('authorization', `Bearer ${token}`)
+        console.log('setou o cookie');
+        next()
+    }});
 };

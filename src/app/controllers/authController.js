@@ -30,7 +30,7 @@ router.post('/register', async (req,res) => {
 
 function generateToken(params = {}){
     return jwt.sign(params, authConfig.secret, { 
-        expiresIn:86400,  
+        expiresIn: '2h',  
       });
 }
 
@@ -45,13 +45,12 @@ router.post('/authenticate', async (req,res) =>{
     if(!await bcrypt.compare(password, user.password))
         return res.status(400).send({ error:'Invalid Password'});
 
-        User.password = undefined;
+        user.password = undefined;
 
-    res.send({ 
-        user, 
-        token: generateToken({ id: user.id }) 
-     });
-    
+        const token = generateToken({ id: user.id })
+        res.cookie('authorization', `Bearer ${token}`).cookie('userId', user.id)
+        
+        res.redirect('/')
 });
 
 module.exports = app => app.use ('/auth', router);
