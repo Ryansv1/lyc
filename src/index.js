@@ -21,10 +21,10 @@ const checkErrorMiddleware = require('./app/middlewares/checkError')
 app.get('/', authMiddleware, checkErrorMiddleware, (req, res) => {
     res.render('pages/index', { title:'Lycooper'});
 });
-app.get('/signin', (req, res)=>{
+app.get('/signin', (req, res)=> {
     res.render('pages/signin', { title:'Lycooper'});
 });
-app.get('/login', (req, res)=>{
+app.get('/login', (req, res)=> {
     res.render('pages/login', { title:'Lycooper'});
 });
 
