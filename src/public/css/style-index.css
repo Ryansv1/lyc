@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilização Navbar */
+
+nav.navbar{
+    background-color: aqua;
+    font-weight: 800;
+}
+
+div.offcanvas-header{
+    background-color: rgb(69, 69, 69);
+}
+
+nav li.nav-item {
+    margin-bottom: 8px;
+}
+
+nav li.nav-item a.active {
+    background-color: rgb(69, 69, 69);;
+}
+
