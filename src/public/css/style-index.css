@@ -6,35 +6,21 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Estilização Navbar */
-
-nav.navbar{
-    background-color: aqua;
-    font-weight: 800;
-}
-
-div.offcanvas-header{
-    background-color: rgb(69, 69, 69);
-}
-
-nav li.nav-item {
-    margin-bottom: 8px;
-}
-
-nav li.nav-item a.active {
-    background-color: rgb(69, 69, 69);;
-}
-
 /* Estilização Div main */
 
 #main-container{
-    background-image: url("../img/tomate-produzido-especialmente-para-a-industria-movimenta-o-campo-cpt.jpg") filter blur(4px);
-    background-repeat: no-repeat;
     width: 100vw;
     height: 60vh;
-    background-size: cover;
+}
+#main-container h1, #main-container h3{
+    font-weight: 800;
 }
 
+#main-container {
+    background-image: url("../img/tomate-produzido-especialmente-para-a-industria-movimenta-o-campo-cpt.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 #container-about-2{
     background-color: #FA5959;
@@ -49,9 +35,12 @@ nav li.nav-item a.active {
 }
 
 #container-about div {
-    background-color: #eef3ff;
+    background-color: rgb(218, 227, 255);
 }
 
+h1, h3, p{
+    text-shadow: 1px 1px rgb(90, 90, 90);
+}
 
 
 

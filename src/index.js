@@ -27,7 +27,9 @@ app.get('/signin', (req, res)=> {
 app.get('/login', (req, res)=> {
     res.render('pages/login', { title:'Lycooper'});
 });
-
+app.get('/sensores', (req, res)=>{
+    res.render('pages/sensores', { title:'Lycooper'});
+})
 
 app.listen(8090);
 console.log('app running on 8090');

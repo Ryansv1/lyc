@@ -1,0 +1,16 @@
+nav.navbar{
+    background-color: aqua;
+    font-weight: 800;
+}
+
+div.offcanvas-header{
+    background-color: rgb(69, 69, 69);
+}
+
+nav li.nav-item {
+    margin-bottom: 8px;
+}
+
+nav li.nav-item a.active {
+    background-color: rgb(69, 69, 69);;
+}
