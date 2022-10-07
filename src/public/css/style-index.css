@@ -25,3 +25,34 @@ nav li.nav-item a.active {
     background-color: rgb(69, 69, 69);;
 }
 
+/* Estilização Div main */
+
+#main-container{
+    background-image: url("../img/tomate-produzido-especialmente-para-a-industria-movimenta-o-campo-cpt.jpg") filter blur(4px);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 60vh;
+    background-size: cover;
+}
+
+
+#container-about-2{
+    background-color: #FA5959;
+}
+
+#container-about-2 div {
+    background-color: #C74848;
+}
+
+#container-about {
+    background-color: rgb(218, 227, 255);
+}
+
+#container-about div {
+    background-color: #eef3ff;
+}
+
+
+
+
+
