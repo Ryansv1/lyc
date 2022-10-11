@@ -3,9 +3,11 @@
 
 <head>
   <%- include('../partials/head.ejs'); %>
-    <link href="./css/style-index.css" rel="stylesheet">
-    <link href="./css/hover.css" rel="stylesheet" media="all">
-    <link href="./css/reset.css" rel="stylesheet" media="all">
+    <link href="css/style-index.css" rel="stylesheet">
+    <link href="css/hover.css" rel="stylesheet" media="all">
+    <link href="css/reset.css" rel="stylesheet" media="all">
+    <link href="css/navbar.css"rel="stylesheet" media="all">
+    <link href="css/footer.css" rel="stylesheet" medial="all">
     <title>Lycooper</title>
 </head>
 
@@ -43,7 +45,7 @@
       </div>
 
       <div id="container-about-2"
-        class="container-fluid d-flex flex-row align-items-center py-4 justify-content-evenly">
+        class="container-fluid d-flex text-light flex-row align-items-center py-4 justify-content-evenly">
         <div class="py-4 px-4 mx-4 border rounded-1  order-1" id="container-image">
           <img src="" alt="projeto img">
         </div>
@@ -62,7 +64,7 @@
       </div>
     </main>
 
-    <footer class="d-flex flex-row align-items-center justify-content-center py-4 bg-dark text-light">
+    <footer>
       <%- include('../partials/footer.ejs') %>
     </footer>
   </body>
