@@ -15,6 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 require('./app/controllers/index')(app);
 require('./api/controllers/getSensorData')(app);
 require('./api/controllers/setSensorData')(app);
+require('./api/controllers/getSensorAll')(app);
 const authMiddleware = require('./app/middlewares/auth')
 const checkErrorMiddleware = require('./app/middlewares/checkError');
 const sensorData = require('./app/middlewares/getSensorData')

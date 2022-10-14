@@ -14,11 +14,18 @@
     <header>
         <%- include('../partials/header.ejs')  %>
     </header>
-    <main class="d-flex flex-row align-items center justify-content-around vh-100">
-        <div class="container-sm w-50 h-25 bg-dark">
-            <form class="bg-dark">
-                <label
-                
+    <main class="container-fluid vh-100 d-flex flex-row justify-content-center align-items-center py-4">
+        <div class="container-sm w-50 h-25">
+            <form class="" method="post" action="api/getall">
+                <select class="form-select bg-dark text-light" aria-label="Default select example" name="sensor">
+                    <option selected>Selecione o sensor</option>
+                    <option value="1">Temperatura do Tanque</option>
+                    <option value="2">Umidade do Solo</option>
+                    <option value="3" >pH</option>
+                    <option value="4">Temperatura da água</option>
+                </select>
+                <input type="date" name="dataColeta">
+                <button type="submit" class="btn btn-dark">Pesquisa</button>
             </form>
             <div class="bg-dark">
 

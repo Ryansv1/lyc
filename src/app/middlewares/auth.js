@@ -31,14 +31,14 @@ module.exports = (req, res, next) =>{
     if(err) {
         req.authError = { error: 'token invalid' }
         req.isValidToken = false
-        console.log('token invalido, next');
+        // console.log('token invalido, next');
         next()
     } else {   
-        console.log('nao entra se der next');
+        // console.log('nao entra se der next');
         req.userId = decoded.id;
         req.isValidToken = true;
         res.cookie('authorization', `Bearer ${token}`)
-        console.log('setou o cookie');
+        // console.log('setou o cookie');
         next()
     }});
 };
