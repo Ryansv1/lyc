@@ -7,7 +7,7 @@
     <link href="css/reset.css" rel="stylesheet" media="all">
     <link href="css/navbar.css"rel="stylesheet" media="all">
     <link href="css/footer.css" rel="stylesheet" medial="all">
-    <title>Sensores</title>
+    <title><%= title %> </title>
 </head>
 <body>
     <header>
@@ -33,13 +33,13 @@
                             <th>Status</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody>                 
                         <tr>
                             <td>PH</td>
-                            <td>null</td>
-                            <td>undefined</td>
-                            <th>On</th>
-                        </tr>
+                            <td>=5</td>
+                            <td><%= sensores.sensor1.dados.valor%> </td>
+                            <th><%= sensores.sensor1.dados.status%></th>
+                        </tr>                          
                     </tbody>
                 </table>
               </div>
@@ -56,11 +56,11 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>PH</td>
-                            <td>null</td>
-                            <td>undefined</td>
-                            <th>On</th>
-                        </tr>
+                            <td>TA</td>
+                            <td>=5</td>
+                            <td><%= sensores.sensor2.dados.valor%> </td>
+                            <th><%= sensores.sensor2.dados.status%></th>
+                        </tr> 
                     </tbody>
                 </table>
               </div>
@@ -77,11 +77,11 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>PH</td>
-                            <td>null</td>
-                            <td>undefined</td>
-                            <th>On</th>
-                        </tr>
+                            <td>AA</td>
+                            <td>=5</td>
+                            <td><%= sensores.sensor3.dados.valor%> </td>
+                            <th><%= sensores.sensor3.dados.status%></th>
+                        </tr> 
                     </tbody>
                 </table>
               </div>
@@ -98,11 +98,11 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>PH</td>
-                            <td>null</td>
-                            <td>undefined</td>
-                            <th>On</th>
-                        </tr>
+                            <td>BB</td>
+                            <td>=5</td>
+                            <td><%= sensores.sensor4.dados.valor%> </td>
+                            <th><%= sensores.sensor4.dados.status%></th>
+                        </tr> 
                     </tbody>
                 </table>
               </div>

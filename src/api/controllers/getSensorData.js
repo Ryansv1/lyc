@@ -7,6 +7,7 @@ router.post('/getdata', checkApiKey, async (req, res) => {
     try {
         const data = req.body
         const sensorData = await Sensores.find()
+        // await Sensores.deleteMany({}) // deleta tudo
         res.json(sensorData)
     } catch (error) {
         res.json(error)

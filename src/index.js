@@ -14,8 +14,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 require('./app/controllers/index')(app);
 require('./api/controllers/getSensorData')(app);
+require('./api/controllers/setSensorData')(app);
 const authMiddleware = require('./app/middlewares/auth')
 const checkErrorMiddleware = require('./app/middlewares/checkError');
+const sensorData = require('./app/middlewares/getSensorData')
 const getSensorData = require('./api/controllers/getSensorData');
 
 // Rotas
@@ -23,18 +25,18 @@ const getSensorData = require('./api/controllers/getSensorData');
 app.get('/', authMiddleware, checkErrorMiddleware, (req, res) => {
     res.render('pages/index', { title:'Lycooper'});
 });
+app.get('/sensores', authMiddleware, checkErrorMiddleware, sensorData, (req, res)=>{
+    res.render('pages/sensores', { title:'Sensores - Lycooper', sensores: req.sensores});
+})
+app.get('/consulta', authMiddleware, checkErrorMiddleware, (req, res)=>{
+    res.render('pages/dados', { title:'Lycooper'});
+})
 app.get('/signin', (req, res)=> {
     res.render('pages/signin', { title:'Lycooper'});
 });
 app.get('/login', (req, res)=> {
     res.render('pages/login', { title:'Lycooper' });
 });
-app.get('/sensores', (req, res)=>{
-    res.render('pages/sensores', { title:'Lycooper'});
-})
-app.get('/consulta', (req, res)=>{
-    res.render('pages/dados.ejs', { title:'Lycooper'});
-})
 
 
 app.listen(8090);

@@ -7,16 +7,15 @@ const sensoresSchema = new mongoose.Schema({
     },
     dados: {
         valor: {
-            type: Number,
-            required: true,
+            type: Number
         },
         status: {
             type: Boolean,
             required: true,
         },
-    },
+    }
 });
-
+sensoresSchema.set('timestamps', true)
 
 const Sensores = mongoose.model('Sensores', sensoresSchema);
 module.exports = Sensores;
