@@ -6,21 +6,9 @@ const router = express.Router();
 router.post('/getall', async (req, res) => {
     const { sensor, dataColeta } = req.body
     try {
-        if(sensor === 1){
-            const dadosSensor = await Sensores.findOne({ id: sensor });
-            console.log(dadosSensor)
-        } if(sensor === 2){
-            const dadosSensor = await Sensores.findOne({ id: sensor });
-            console.log(dadosSensor)
-        } if (sensor === 3){
-            const dadosSensor = await Sensores.findOne({ id: sensor });
-            console.log(dadosSensor)
-        } if (sensor === 4){
-            const dadosSensor = await Sensores.findOne({ id: sensor });
-            console.log(dadosSensor)
-        } else{
-            console.log(error)
-        }
+        console.log(req.body)
+        const dadosSensor = await Sensores.findOne({ id: sensor, dataColeta: dataColeta });
+        console.log(dadosSensor)
         
 
     } catch (err) {
