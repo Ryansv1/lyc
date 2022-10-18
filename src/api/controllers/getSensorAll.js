@@ -7,9 +7,8 @@ router.post('/getall', async (req, res) => {
     const { sensor, dataColeta } = req.body
     try {
         console.log(req.body)
-        const dadosSensor = await Sensores.findOne({ id: sensor, dataColeta: dataColeta });
-        console.log(dadosSensor)
-        
+        const dadosSensor = await Sensores.find({id:sensor});   
+        res.json(dadosSensor)
 
     } catch (err) {
         console.log("entrou no erro")

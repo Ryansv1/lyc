@@ -14,17 +14,9 @@ const sensoresSchema = new mongoose.Schema({
             required: true,
         },
     },
-    dataColeta: {
-        type: Date,
-        default: Date
-    }
 });
 
-sensoresSchema.pre('save', async function(next){
-    let data = this.dataColeta
-    let dataFormatada = (data.getFullYear() + "-" + ((data.getMonth() + 1)) + "-" + (data.getDate() )) ; 
-    next();
-})
+sensoresSchema.set('timestamps', true);
 
 const Sensores = mongoose.model('Sensores', sensoresSchema);
 module.exports = Sensores;

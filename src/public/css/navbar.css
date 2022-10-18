@@ -1,10 +1,10 @@
 nav.navbar{
-    background-color: #200122;  /* fallback for old browsers */
+    background-color: #0a211c;  /* fallback for old browsers */
     font-weight: 800;
 }
 
 div.offcanvas-header{
-    background-color: #200122;
+    background-color: #0a211c;
 }
 
 nav li.nav-item {
@@ -16,5 +16,5 @@ nav li.nav-item a.active {
 } /* não ta funcionandO PQ EU N SEI JAVASCRIPT */
 
 .offcanvas-body{
-    background-color: #200122;
+    background-color: #0a211c;
 }
