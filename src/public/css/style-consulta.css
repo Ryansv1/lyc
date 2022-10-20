@@ -1,5 +1,18 @@
 main {
-    background: #200122;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #6f0000, #200122);
+    background: #4CB8C4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #3CD3AD, #4CB8C4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #3CD3AD, #4CB8C4);
+}
+
+div.container-sm {
+    background-color: #003328 !important;
+    border-radius: 20px;
+}
+
+.btn{
+    background-color: #9cf3e0 !important;
+}
+
+input.date{
+    border-radius: 4px;
 }

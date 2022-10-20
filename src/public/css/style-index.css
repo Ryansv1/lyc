@@ -11,9 +11,9 @@
 }
 
 #main-container {
-    background-image: url("../img/tomate-produzido-especialmente-para-a-industria-movimenta-o-campo-cpt.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: #4CB8C4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #3CD3AD, #4CB8C4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #3CD3AD, #4CB8C4);
 }
 
 #container-about-2{

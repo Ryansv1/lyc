@@ -2,10 +2,6 @@
     margin-top:200px;
 }
 
-.carousel-indicators{
-    margin-bottom: 100px;
-}
-
 main.container-fluid {
     background: #4CB8C4;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #3CD3AD, #4CB8C4);  /* Chrome 10-25, Safari 5.1-6 */
