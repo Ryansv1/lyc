@@ -9,10 +9,6 @@ const sensoresSchema = new mongoose.Schema({
         valor: {
             type: Number
         },
-        status: {
-            type: Boolean,
-            required: true,
-        },
     },
 });
 

@@ -7,11 +7,11 @@ router.post('/getall', async (req, res) => {
     const { sensor, dataColeta } = req.body
     try {
         console.log(req.body)
-        const dadosSensor = await Sensores.find({id:sensor});   
+        const dadosSensor = await Sensores.find({id:sensor, createdAt: {$slice: [-11] }});   
         res.json(dadosSensor)
 
     } catch (err) {
-        console.log("entrou no erro")
+        console.log(err)
         res.json(err)
     }
 
